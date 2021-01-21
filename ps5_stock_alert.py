@@ -41,7 +41,7 @@ def run_listener():
                         text = json.loads(decoded_line)['data']['text']
                         if any(search_term in text.lower() for search_term in SEARCH_TERMS) and not 'not a drop' in text.lower():
                             print(text)
-                            print('**********************************************************************************')
+                            print('*'*40)
                             playsound('./notification.mp3')
                     except KeyError:
                         pass
